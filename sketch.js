@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight).parent("test");
   background(0);
   colorMode(HSB);
 }
@@ -22,11 +22,11 @@ function draw() {
   if (count > 300) {
     noLoop();
   }
-
-  //   print(frameCount % 360);
 }
 function mousePressed() {
-  loop();
   background(0);
   count = 0;
+}
+function mouseReleased() {
+  loop();
 }
